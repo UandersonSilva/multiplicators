@@ -4,13 +4,13 @@ module sm_control #(
     input logic start_in, product_msb_in, clock, reset_in,
     input logic [1:0] signal_bit_in,
     input logic [WIDTH - 1:0] multiplier_in,
-    output logic multiplicand_inv_out, multiplicand_wr_out,
+    output logic multiplicand_comp_out, multiplicand_wr_out,
     output logic [1:0] multiplicand_shift_out,
-    output logic multiplier_inv_out, multiplier_wr_out,
+    output logic multiplier_comp_out, multiplier_wr_out,
     output logic signal_bit_wr_out, product_wr_out,
     output logic multiplicand_reset_out, multiplier_reset_out,
     output logic product_reset_out, signal_bit_reset_out,
-    output logic product_inv_out,
+    output logic product_comp_out,
     output logic done_out, overflow_out
 
 );
@@ -40,9 +40,9 @@ module sm_control #(
 	always_ff @(negedge clock or negedge reset_in)
 	begin
         if(!reset_in)
-			current_state <= _RESET;
+		    current_state <= _RESET;
 		else
-			current_state <= next_state;
+		    current_state <= next_state;
 	end
 
     always_comb
@@ -87,10 +87,10 @@ module sm_control #(
         case(current_state)
             _IDLE:
             begin
-                multiplicand_inv_out   <= 1'b0;
+                multiplicand_comp_out   <= 1'b0;
                 multiplicand_wr_out    <= 1'b0;
                 multiplicand_shift_out <= 2'b00;
-                multiplier_inv_out     <= 1'b0; 
+                multiplier_comp_out     <= 1'b0; 
                 multiplier_wr_out      <= 1'b0;
                 signal_bit_wr_out      <= 1'b0;
                 product_wr_out         <= 1'b0;
@@ -98,15 +98,15 @@ module sm_control #(
                 multiplier_reset_out   <= 1'b0;
                 product_reset_out      <= 1'b0;
                 signal_bit_reset_out   <= 1'b0;
-                product_inv_out        <= 1'b0;
+                product_comp_out        <= 1'b0;
             end
 
             _RESET:
             begin
-                multiplicand_inv_out   <= 1'b0;
+                multiplicand_comp_out   <= 1'b0;
                 multiplicand_wr_out    <= 1'b0;
                 multiplicand_shift_out <= 2'b00;
-                multiplier_inv_out     <= 1'b0; 
+                multiplier_comp_out     <= 1'b0; 
                 multiplier_wr_out      <= 1'b0;
                 signal_bit_wr_out      <= 1'b0;
                 product_wr_out         <= 1'b0;
@@ -114,7 +114,7 @@ module sm_control #(
                 multiplier_reset_out   <= 1'b1;
                 product_reset_out      <= 1'b1;
                 signal_bit_reset_out   <= 1'b1;
-                product_inv_out        <= 1'b0;
+                product_comp_out        <= 1'b0;
                 
                 pos = 0;
                 signal_bit_read <= 1'b0;
@@ -126,9 +126,9 @@ module sm_control #(
             begin
                 if(!signal_bit_read)
                 begin
-                    multiplicand_inv_out   <= 1'b0;
+                    multiplicand_comp_out   <= 1'b0;
                     multiplicand_wr_out    <= 1'b0;
-                    multiplier_inv_out     <= 1'b0; 
+                    multiplier_comp_out     <= 1'b0; 
                     multiplier_wr_out      <= 1'b0;
                     signal_bit_wr_out      <= 1'b1;
                     
@@ -138,16 +138,16 @@ module sm_control #(
                 else
                 begin
                     if(signal_bit_in[1])
-                        multiplicand_inv_out   <= 1'b1;
+                        multiplicand_comp_out   <= 1'b1;
                     else
-                        multiplicand_inv_out   <= 1'b0;
+                        multiplicand_comp_out   <= 1'b0;
 
                     multiplicand_wr_out    <= 1'b1;
 
                     if(signal_bit_in[0])
-                        multiplier_inv_out   <= 1'b1;
+                        multiplier_comp_out   <= 1'b1;
                     else
-                        multiplier_inv_out   <= 1'b0;
+                        multiplier_comp_out   <= 1'b0;
                         
                     multiplier_wr_out      <= 1'b1;
 
@@ -161,7 +161,7 @@ module sm_control #(
                 multiplier_reset_out   <= 1'b0;
                 product_reset_out      <= 1'b0;
                 signal_bit_reset_out   <= 1'b0;
-                product_inv_out        <= 1'b0;
+                product_comp_out        <= 1'b0;
             end
 
             _PRODUCT_INCREMENT:
@@ -196,15 +196,15 @@ module sm_control #(
                 begin
                     multiplicand_shift_out <= 2'b00;
                     product_wr_out <= 1'b0;
-                    product_inv_out <= signal_bit_in[1] ^ signal_bit_in[0]; //XOR
+                    product_comp_out <= signal_bit_in[1] ^ signal_bit_in[0]; //XOR
                     overflow_out    <= product_msb_in;
                     done_out        <= 1'b1;
                     mult_finished   <= 1'b1;
                 end
 
-                multiplicand_inv_out   <= 1'b0;
+                multiplicand_comp_out   <= 1'b0;
                 multiplicand_wr_out    <= 1'b0;
-                multiplier_inv_out     <= 1'b0; 
+                multiplier_comp_out     <= 1'b0; 
                 multiplier_wr_out      <= 1'b0;
                 signal_bit_wr_out      <= 1'b0;
                 
