@@ -1,5 +1,5 @@
 class output_transaction;
-    logic signed [WIDTH - 1:0] product_out;
+    logic signed [2*WIDTH - 1:0] product_out;
     logic overflow_out;
 
     function bit compare(output_transaction compared);
