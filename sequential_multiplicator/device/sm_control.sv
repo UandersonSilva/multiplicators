@@ -17,7 +17,7 @@ module sm_control #(
     localparam 
         _IDLE = 2'b00,
         _RESET = 2'b01,
-        _INVERT = 2'b10,
+        _COMPLEMENT = 2'b10,
         _PRODUCT_INCREMENT = 2'b11;
 
     logic [1:0] current_state, next_state = _RESET;
@@ -59,17 +59,17 @@ module sm_control #(
 			_RESET: 
 			begin
                 if(mult_rq)
-				    next_state <= _INVERT;
+				    next_state <= _COMPLEMENT;
                 else
                     next_state <= _IDLE;
 			end
 
-			_INVERT:
+			_COMPLEMENT:
 			begin
                 if(signal_bit_read)
 				    next_state <= _PRODUCT_INCREMENT;
                 else
-                    next_state <= _INVERT;
+                    next_state <= _COMPLEMENT;
 			end
 
             _PRODUCT_INCREMENT:
@@ -122,7 +122,7 @@ module sm_control #(
                 overflow_out <= 1'b0;
             end
 
-            _INVERT:
+            _COMPLEMENT:
             begin
                 if(!signal_bit_read)
                 begin
