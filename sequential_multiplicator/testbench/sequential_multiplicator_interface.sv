@@ -24,15 +24,19 @@ interface sequential_multiplicator_interface();
     task send_data(
             logic [WIDTH - 1:0] mnd_in,
             logic [WIDTH - 1:0] mtr_in,
-            logic srt, logic rst, logic overflow,
-            logic [2*WIDTH - 1:0] prod_out
+            logic srt, logic rst,
+            logic [2*WIDTH - 1:0] prod_out,
+            logic overflow
         );
         multiplicand_in = mnd_in;
         multiplier_in = mtr_in;
         start_in = srt;
         reset_in = rst;
 
-        @(posedge done);
+        if(start_in)
+            @(posedge done);
+        else 
+            @(posedge clock);
         #2;
         prod_out = product_out;
         overflow = overflow_out;
@@ -45,8 +49,12 @@ interface sequential_multiplicator_interface();
         -> input_read;
     end
 
-    always @(posedge done)
+    always @(posedge start or negedge reset)
     begin : output_monitor_read
+        if(start_in)
+            @(posedge done);
+        else 
+            @(posedge clock);
         #2;
         output_monitor_r.read(product_out, overflow_out);
         -> output_read;
