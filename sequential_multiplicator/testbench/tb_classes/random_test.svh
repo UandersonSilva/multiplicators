@@ -18,7 +18,7 @@ class random_test extends base_test;
             data_i.reset_in = 1;
             super.insert_data();
             
-            #(2);
+            #2;
             data_i.start_in = 0;
 
             @(data_i.done);
