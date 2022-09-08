@@ -23,7 +23,12 @@ class scoreboard;
                 if(t_in.start_in)
                 begin
                     predicted.product_out = t_in.multiplicand_in * t_in.multiplier_in;
-                    predicted.overflow_out = 
+                    predicted.overflow_out = ((t_in.multiplicand_in >= 0 && t_in.multiplier_in >= 0) ||  
+                                              (t_in.multiplicand_in < 0 && t_in.multiplier_in < 0)) && 
+                                              (predicted.product_out < 0) || //+*+ or -*- = - 
+                                              ((t_in.multiplicand_in >= 0 && t_in.multiplier_in < 0) || 
+                                              (t_in.multiplicand_in < 0 && t_in.multiplier_in >= 0)) &&
+                                              (predicted.product_out >= 0); //+*- or -*+ = +
                 end
                 else if(!t_in.reset_in)
                 begin
@@ -43,7 +48,7 @@ class scoreboard;
                     $display("%0t", $time, {" [SCOREBOARD]: PASS:: ", t_in.convert2string(), 
                     " => ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
                 else
-                    $display("%0t", $time, {"% [SCOREBOARD]: FAIL:: ", t_in.convert2string(), 
+                    $display("%0t", $time, {" [SCOREBOARD]: FAIL:: ", t_in.convert2string(), 
                     " => ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
             end
         end
