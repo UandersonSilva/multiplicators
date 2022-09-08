@@ -15,7 +15,7 @@ class driver;
                 $display("%0t [DRIVER]: No data item.", $time);
             else
             begin
-                reg_if.send_data(data_i.multiplicand_in, 
+                sm_if.send_data(data_i.multiplicand_in, 
                                  data_i.multiplier_in, 
                                  data_i.start_in, 
                                  data_i.reset_in, 

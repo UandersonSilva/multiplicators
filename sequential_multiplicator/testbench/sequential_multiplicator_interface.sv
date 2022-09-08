@@ -34,7 +34,7 @@ interface sequential_multiplicator_interface();
         reset_in = rst;
 
         if(start_in)
-            @(posedge done);
+            @(posedge done_out);
         else 
             @(posedge clock);
         #2;
@@ -42,17 +42,17 @@ interface sequential_multiplicator_interface();
         overflow = overflow_out;
     endtask : send_data
 
-    always @(posedge start or negedge reset)
+    always @(posedge start_in or negedge reset_in)
     begin : input_monitor_read
         #2;
         input_monitor_r.read(multiplicand_in, multiplier_in, start_in, reset_in);
         -> input_read;
     end
 
-    always @(posedge start or negedge reset)
+    always @(posedge start_in or negedge reset_in)
     begin : output_monitor_read
         if(start_in)
-            @(posedge done);
+            @(posedge done_out);
         else 
             @(posedge clock);
         #2;

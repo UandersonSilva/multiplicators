@@ -14,7 +14,9 @@ module sequential_multiplicator_tb_top;
         .start_in(sm_if.start_in),
         .reset_in(sm_if.reset_in),
         .clock(sm_if.clock), 
-        .product_out(sm_if.product_out)
+        .product_out(sm_if.product_out),
+        .overflow_out(sm_if.overflow_out),
+        .done_out(sm_if.done_out)
     );
 
     random_test t0;
