@@ -33,10 +33,13 @@ interface sequential_multiplicator_interface();
         start_in = srt;
         reset_in = rst;
 
-        if(start_in && reset_in)
+        if(start_in)
         begin
             #10 start_in = 1'b0;
-            @(posedge done_out);
+            if(reset_in)
+                @(posedge done_out);
+            else
+                @(negedge clock);
         end
         else 
             @(negedge clock);
