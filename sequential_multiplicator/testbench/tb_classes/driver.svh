@@ -9,7 +9,6 @@ class driver;
         begin
             data_mbox.get(data_i);
             
-            @(negedge sm_if.clock);
             #1;
             if(data_i == null)
                 $display("%0t [DRIVER]: No data item.", $time);

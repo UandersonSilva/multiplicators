@@ -34,9 +34,12 @@ interface sequential_multiplicator_interface();
         reset_in = rst;
 
         if(start_in)
+        begin
+            #10 start_in = 1'b0;
             @(posedge done_out);
+        end
         else 
-            @(posedge clock);
+            @(negedge clock);
         #2;
         prod_out = product_out;
         overflow = overflow_out;
@@ -54,7 +57,7 @@ interface sequential_multiplicator_interface();
         if(start_in)
             @(posedge done_out);
         else 
-            @(posedge clock);
+            @(negedge clock);
         #2;
         output_monitor_r.read(product_out, overflow_out);
         -> output_read;
