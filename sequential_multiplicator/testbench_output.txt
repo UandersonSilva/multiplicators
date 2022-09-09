@@ -1,0 +1,20 @@
+# KERNEL: 22 [SCOREBOARD]: INPUT:: multiplicand_in: 483 multiplier_in: -30243 start_in: 1 reset_in: 1
+# KERNEL: 762 [SCOREBOARD]: PASS:: product_out: -14607369 overflow_out: 0 || Predicted => product_out: -14607369 overflow_out: 0
+# KERNEL: 782 [SCOREBOARD]: INPUT:: multiplicand_in: 2808 multiplier_in: -32414 start_in: 1 reset_in: 1
+# KERNEL: 1522 [SCOREBOARD]: PASS:: product_out: -91018512 overflow_out: 0 || Predicted => product_out: -91018512 overflow_out: 0
+# KERNEL: 1542 [SCOREBOARD]: INPUT:: multiplicand_in: 8900 multiplier_in: 19044 start_in: 1 reset_in: 1
+# KERNEL: 2282 [SCOREBOARD]: PASS:: product_out: 169491600 overflow_out: 0 || Predicted => product_out: 169491600 overflow_out: 0
+# KERNEL: 2302 [SCOREBOARD]: INPUT:: multiplicand_in: -2830 multiplier_in: -10315 start_in: 1 reset_in: 1
+# KERNEL: 3042 [SCOREBOARD]: PASS:: product_out: 29191450 overflow_out: 0 || Predicted => product_out: 29191450 overflow_out: 0
+# KERNEL: 3062 [SCOREBOARD]: INPUT:: multiplicand_in: -31766 multiplier_in: 24840 start_in: 1 reset_in: 1
+# KERNEL: 3802 [SCOREBOARD]: PASS:: product_out: -789067440 overflow_out: 0 || Predicted => product_out: -789067440 overflow_out: 0
+# KERNEL: 3822 [SCOREBOARD]: INPUT:: multiplicand_in: -20175 multiplier_in: 23103 start_in: 1 reset_in: 1
+# KERNEL: 4562 [SCOREBOARD]: PASS:: product_out: -466103025 overflow_out: 0 || Predicted => product_out: -466103025 overflow_out: 0
+# KERNEL: 4582 [SCOREBOARD]: INPUT:: multiplicand_in: -9642 multiplier_in: 9480 start_in: 1 reset_in: 1
+# KERNEL: 5322 [SCOREBOARD]: PASS:: product_out: -91406160 overflow_out: 0 || Predicted => product_out: -91406160 overflow_out: 0
+# KERNEL: 5342 [SCOREBOARD]: INPUT:: multiplicand_in: 14914 multiplier_in: -17016 start_in: 1 reset_in: 1
+# KERNEL: 6082 [SCOREBOARD]: PASS:: product_out: -253776624 overflow_out: 0 || Predicted => product_out: -253776624 overflow_out: 0
+# KERNEL: 6102 [SCOREBOARD]: INPUT:: multiplicand_in: 10259 multiplier_in: -9776 start_in: 1 reset_in: 1
+# KERNEL: 6842 [SCOREBOARD]: PASS:: product_out: -100291984 overflow_out: 0 || Predicted => product_out: -100291984 overflow_out: 0
+# KERNEL: 6862 [SCOREBOARD]: INPUT:: multiplicand_in:  x multiplier_in:  x start_in: 0 reset_in: 0
+# KERNEL: 6882 [SCOREBOARD]: PASS:: product_out:  0 overflow_out: 0 || Predicted => product_out:  0 overflow_out: 0
