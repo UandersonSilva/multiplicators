@@ -35,6 +35,8 @@ class scoreboard;
                     predicted.product_out = {WIDTH{1'b0}};
                     predicted.overflow_out = 1'b0;
                 end
+
+                $display("%0t", $time, {" [SCOREBOARD]: INPUT:: ", t_in.convert2string()});
             end
 
             @(output_read);
@@ -45,11 +47,9 @@ class scoreboard;
             else
             begin
                 if(t_out.compare(predicted))
-                    $display("%0t", $time, {" [SCOREBOARD]: PASS:: ", t_in.convert2string(), 
-                    " => ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
+                    $display("%0t", $time, {" [SCOREBOARD]: PASS:: ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
                 else
-                    $display("%0t", $time, {" [SCOREBOARD]: FAIL:: ", t_in.convert2string(), 
-                    " => ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
+                    $display("%0t", $time, {" [SCOREBOARD]: FAIL:: ", t_out.convert2string(), " || Predicted => ", predicted.convert2string()});
             end
         end
     endtask : run
