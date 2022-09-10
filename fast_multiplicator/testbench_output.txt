@@ -1,0 +1,20 @@
+# KERNEL: 11 [SCOREBOARD]: INPUT:: multiplicand_in: -22579 multiplier_in: -21656
+# KERNEL: 12 [SCOREBOARD]: PASS:: product_out: 488970824 overflow_out: 0 || Predicted => product_out: 488970824 overflow_out: 0
+# KERNEL: 31 [SCOREBOARD]: INPUT:: multiplicand_in: 15710 multiplier_in: -19280
+# KERNEL: 32 [SCOREBOARD]: PASS:: product_out: -302888800 overflow_out: 0 || Predicted => product_out: -302888800 overflow_out: 0
+# KERNEL: 51 [SCOREBOARD]: INPUT:: multiplicand_in: -31669 multiplier_in: 19471
+# KERNEL: 52 [SCOREBOARD]: PASS:: product_out: -616627099 overflow_out: 0 || Predicted => product_out: -616627099 overflow_out: 0
+# KERNEL: 71 [SCOREBOARD]: INPUT:: multiplicand_in: 20805 multiplier_in: 7042
+# KERNEL: 72 [SCOREBOARD]: PASS:: product_out: 146508810 overflow_out: 0 || Predicted => product_out: 146508810 overflow_out: 0
+# KERNEL: 91 [SCOREBOARD]: INPUT:: multiplicand_in: 20092 multiplier_in: -31664
+# KERNEL: 92 [SCOREBOARD]: PASS:: product_out: -636193088 overflow_out: 0 || Predicted => product_out: -636193088 overflow_out: 0
+# KERNEL: 111 [SCOREBOARD]: INPUT:: multiplicand_in: -30807 multiplier_in: -12376
+# KERNEL: 112 [SCOREBOARD]: PASS:: product_out: 381267432 overflow_out: 0 || Predicted => product_out: 381267432 overflow_out: 0
+# KERNEL: 131 [SCOREBOARD]: INPUT:: multiplicand_in: 22576 multiplier_in: -30599
+# KERNEL: 132 [SCOREBOARD]: PASS:: product_out: -690803024 overflow_out: 0 || Predicted => product_out: -690803024 overflow_out: 0
+# KERNEL: 151 [SCOREBOARD]: INPUT:: multiplicand_in: -31525 multiplier_in: 9808
+# KERNEL: 152 [SCOREBOARD]: PASS:: product_out: -309197200 overflow_out: 0 || Predicted => product_out: -309197200 overflow_out: 0
+# KERNEL: 171 [SCOREBOARD]: INPUT:: multiplicand_in: 11172 multiplier_in: -20740
+# KERNEL: 172 [SCOREBOARD]: PASS:: product_out: -231707280 overflow_out: 0 || Predicted => product_out: -231707280 overflow_out: 0
+# KERNEL: 191 [SCOREBOARD]: INPUT:: multiplicand_in:  0 multiplier_in:  0
+# KERNEL: 192 [SCOREBOARD]: PASS:: product_out:  0 overflow_out: 0 || Predicted => product_out:  0 overflow_out: 0
