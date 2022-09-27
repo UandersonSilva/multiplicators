@@ -13,7 +13,7 @@ module alu_c #(
     always_comb
     begin
         if(alu_op_in)
-            alu_out = alu_A_in - alu_B_in;
+            {alu_C_out, alu_out} = alu_A_in - alu_B_in;
         else
             {alu_C_out, alu_out} = alu_A_in + alu_B_in;
         

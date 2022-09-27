@@ -54,7 +54,7 @@ module fast_multiplicator #(
         genvar i;
 
         for(i = 1; i < WIDTH - 2; i++)
-        begin
+        begin : multi_generation
             assign alu_a[i] = multiplicand & {WIDTH{multiplier[i+1]}};
             assign product[i] = alu_b[i][0];
 
@@ -67,7 +67,7 @@ module fast_multiplicator #(
                 .alu_N_out(),
                 .alu_C_out(alu_co[i])
             );
-        end
+        end : multi_generation
     endgenerate
 
     assign alu_a[WIDTH-2] = multiplicand & {WIDTH{multiplier[WIDTH-1]}};
