@@ -15,7 +15,7 @@ package fd_tb_pkg;
     `include "./tb_classes/env.svh"
     `include "./tb_classes/tests/base_test.svh"
     
-    //`include "./tb_classes/tests/initial_test.svh"
+    `include "./tb_classes/tests/initial_test.svh"
     `include "./tb_classes/tests/random_test.svh"
     //`include "./tb_classes/tests/factorial_test.svh"
     //`include "./tb_classes/tests/ofuf_test.svh"

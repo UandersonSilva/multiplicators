@@ -24,12 +24,12 @@ module fd_tb_top;
         $value$plusargs("TEST=%s", test_name);
 
         case(test_name)
-        //    "INITIAL_TEST":
-        //    begin
-        //        initial_test selected;
-        //        selected = new();
-        //        t0 = selected;
-        //    end
+            "INITIAL_TEST":
+            begin
+                initial_test selected;
+                selected = new();
+                t0 = selected;
+            end
             
             "RANDOM_TEST":
             begin
