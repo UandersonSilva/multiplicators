@@ -38,19 +38,12 @@ module fd_tb_top;
                 t0 = selected;
             end
 
-        //    "FACTORIAL_TEST":
-        //    begin
-        //        factorial_test selected;
-        //        selected = new();
-        //        t0 = selected;
-        //    end
-
-        //    "OFUF_TEST":
-        //    begin
-        //        ofuf_test selected;
-        //        selected = new();
-        //        t0 = selected;
-        //    end
+            "PRIME_NUMBER_TEST":
+            begin
+                prime_number_test selected;
+                selected = new();
+                t0 = selected;
+            end
 
             default:
             begin
