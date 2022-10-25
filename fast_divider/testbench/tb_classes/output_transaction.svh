@@ -9,8 +9,7 @@ class output_transaction;
             $display("%0t [OUTPUT TRANSACTION]: Null pointer. Comparison aborted.", $time);
         else
         begin
-            same = same && 
-                   (compared.quotient_out == quotient_out) &&
+            same = (compared.quotient_out == quotient_out) &&
                    (compared.remainder_out == remainder_out) && 
                    (compared.dbz_out == dbz_out);
         end

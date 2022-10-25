@@ -14,11 +14,11 @@ class driver;
                 $display("%0t [DRIVER]: No data item.", $time);
             else
             begin
-                fd_if.send_data(data_i.a_in, 
-                                 data_i.b_in,  
-                                 data_i.fd_out, 
-                                 data_i.overflow_out,
-                                 data_i.underflow_out
+                fd_if.send_data(data_i.dividend_in, 
+                                 data_i.divisor_in,  
+                                 data_i.quotient_out, 
+                                 data_i.remainder_out,
+                                 data_i.dbz_out
                                 );
                 ->data_i.done;
 

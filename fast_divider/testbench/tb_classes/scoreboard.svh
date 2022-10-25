@@ -22,7 +22,7 @@ class scoreboard;
             begin
                 predicted.quotient_out  = t_in.dividend_in / t_in.divisor_in;
                 predicted.remainder_out = t_in.dividend_in % t_in.divisor_in;
-                predicted.remainder_out = (t_in.divisor == 0) ? 1'b1 : 1'b0;
+                predicted.dbz_out = (t_in.divisor_in == 0) ? 1'b1 : 1'b0;
                 
                 $display("%0t", $time, {" [SCOREBOARD]: INPUT:: ", t_in.convert2string()});
             end
