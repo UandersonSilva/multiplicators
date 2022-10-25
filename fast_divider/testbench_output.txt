@@ -5,18 +5,22 @@
 # 11 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 35
 # 12 [SCOREBOARD]: PASS:: quotient_out: 1 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: 1 remainder_out: 0 dbz_out: 0  
 # 21 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 1
-# 22 [SCOREBOARD]: PASS:: quotient_out: 35 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: 35 remainder_out: 0 dbz_out: 0# 31 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 5
+# 22 [SCOREBOARD]: PASS:: quotient_out: 35 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: 35 remainder_out: 0 dbz_out: 0
+# 31 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 5
 # 32 [SCOREBOARD]: PASS:: quotient_out: 7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: 7 remainder_out: 0 dbz_out: 0  
 # 41 [SCOREBOARD]: INPUT:: dividend_in: -35 divisor_in: 5
-# 42 [SCOREBOARD]: PASS:: quotient_out: -7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: -7 remainder_out: 0 dbz_out: 0# 51 [SCOREBOARD]: INPUT:: dividend_in: -35 divisor_in: -5
+# 42 [SCOREBOARD]: PASS:: quotient_out: -7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: -7 remainder_out: 0 dbz_out: 0
+# 51 [SCOREBOARD]: INPUT:: dividend_in: -35 divisor_in: -5
 # 52 [SCOREBOARD]: PASS:: quotient_out: 7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: 7 remainder_out: 0 dbz_out: 0  
 # 61 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: -5
-# 62 [SCOREBOARD]: PASS:: quotient_out: -7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: -7 remainder_out: 0 dbz_out: 0# 71 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 4
+# 62 [SCOREBOARD]: PASS:: quotient_out: -7 remainder_out: 0 dbz_out: 0 || Predicted => quotient_out: -7 remainder_out: 0 dbz_out: 0
+# 71 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 4
 # 72 [SCOREBOARD]: PASS:: quotient_out: 8 remainder_out: 3 dbz_out: 0 || Predicted => quotient_out: 8 remainder_out: 3 dbz_out: 0  
 # 81 [SCOREBOARD]: INPUT:: dividend_in: -35 divisor_in: 4
 # 82 [SCOREBOARD]: PASS:: quotient_out: -8 remainder_out: -3 dbz_out: 0 || Predicted => quotient_out: -8 remainder_out: -3 dbz_out: 0
 # 91 [SCOREBOARD]: INPUT:: dividend_in: -35 divisor_in: -4
-# 92 [SCOREBOARD]: PASS:: quotient_out: 8 remainder_out: -3 dbz_out: 0 || Predicted => quotient_out: 8 remainder_out: -3 dbz_out: 0# 101 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: -4
+# 92 [SCOREBOARD]: PASS:: quotient_out: 8 remainder_out: -3 dbz_out: 0 || Predicted => quotient_out: 8 remainder_out: -3 dbz_out: 0
+# 101 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: -4
 # 102 [SCOREBOARD]: PASS:: quotient_out: -8 remainder_out: 3 dbz_out: 0 || Predicted => quotient_out: -8 remainder_out: 3 dbz_out: 0
 # 111 [SCOREBOARD]: INPUT:: dividend_in: 35 divisor_in: 0
 # 112 [SCOREBOARD]: FAIL:: quotient_out: -1 remainder_out: 35 dbz_out: 1 || Predicted => quotient_out: x remainder_out: x dbz_out: 1
