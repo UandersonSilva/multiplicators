@@ -4,7 +4,7 @@ This component performs the division operation of two integer 16-bit numbers.
 
 ## Example 
 
-The following exemple uses 4-bit words, but the same method is applicable to words that have more bits.
+The following example uses 4-bit words, but the same method is applicable to words that have more bits.
 
 ![fd example](../alib/division_example.svg)
 
